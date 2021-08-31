@@ -1,5 +1,5 @@
 # LightspeedKV
-Bypasses Linux Networking stack through XDP to implement an ultra-low latency key-value store
+Explores bypassing Linux Networking stack through XDP to implement an ultra-low latency key-value store
 
 # Motivation
 This project was born out of frustration with the latencies of popular remote memory-caches - they all suffer from bottlenecks induced by the Linux network stack. I explored the potential of using eBPFs to build a cache that safely serves simple key-value cache requests in-kernel through the eXpress Data Path (XDP). By avoiding user-kernel boundary crossings, this approach is performant under high-throughput workloads. In the future, I'd like to explore the feasibility of building a performant proxy using eBPFs enabling the distribution of data among multiple LightspeedKV nodes and explore potential for offloading to SmartNICs.
